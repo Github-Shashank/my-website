@@ -1,8 +1,10 @@
 body {
-    font-family : Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
 header {
@@ -14,6 +16,17 @@ header {
 
 header h1 {
     margin: 0;
+}
+
+#darkModeToggle {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: #555;
+    color: white;
+    font-size: 14px;
 }
 
 nav {
@@ -35,7 +48,7 @@ section {
     padding: 40px 20px;
 }
 
-section:nth-child(even) {
+section:nth-child() {
     background: #f4f4f4;
 }
 
@@ -51,4 +64,42 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #f4f4f4;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background: #222;
+}
+
+/* Light mode */
+section a:link,
+section a:visited {
+  color: blue;   /* or whatever you want */
+  text-decoration: none;
+}
+
+section a:hover,
+section a:active {
+  color: red;    /* hover effect */
+}
+
+/* Dark mode */
+.dark-mode section a:link,
+.dark-mode section a:visited {
+  color: yellow;
+}
+
+.dark-mode section a:hover,
+.dark-mode section a:active {
+  color: orange;
+}
+
+.dark-mode #darkModeToggle {
+  background: #ddd;
+  color: #000;
 }
