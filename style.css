@@ -115,3 +115,9 @@ section a:active {
   background: #ddd;
   color: #000;
 }
+
+pre {
+    font-family: inherit;  /* makes it use the same font as body */
+    font-size: inherit;    /* optional: same size as surrounding text */
+    white-space: pre;      /* keep pre’s spacing behavior */
+}
