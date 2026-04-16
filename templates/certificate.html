@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}My Certificates{% endblock %}
+{% block body %}
+<header>
+    <h1>Certificates</h1>
+    <button id="darkModeToggle">🌙 Dark Mode</button>
+    <nav>
+        <a href="../index.html" style="text-decoration: none;">🏠</a>
+        <a href="#mooc" style="text-decoration: none">MOOC</a>
+    </nav>
+</header>
+
+<section id="mooc" style="text-align: center;">
+    <h1>MOOC</h1>
+    <ul type="none">
+        <img src="{{ url_for('static', filename=cert_lst['time']) }}" width="300">
+        <img src="{{ url_for('static', filename=cert_lst['healthy']) }}" width="300">
+    </ul>
+</section>
+{% endblock %}

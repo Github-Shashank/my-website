@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" sizes="1x10" href="https://github.com/Github-Shashank/my-website/blob/main/images/html_5.ico?raw=true">
-    <title>My Github Page</title>
-    <link rel="stylesheet" href="..\style.css">
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}My Projects{% endblock %}
+{% block body %}
     <header>
         <center><h1>Projects</h1></center>
         <button id="darkModeToggle">🌙 Dark Mode</button>
@@ -31,7 +24,7 @@
     </section>
 
     <section id = "python">
-        <h1>Python <img src="https://github.com/Github-Shashank/my-website/blob/main/images/py_logo.png?raw=true" alt="" class="icon"></h1> 
+        <h1>Python <img src="{{ url_for('static', filename=logo_lst['python']) }}" alt="" class="icon"></h1> 
         <ol>
             <li>🖥️ <a href="https://github.com/Github-Shashank/Assembly-Simulator"  target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Custom CPU Simulator</a> -  Minecraft redstone computer with a 17-bit ISA.</li>
             <li>🧮 <a href="https://github.com/Github-Shashank/approximating-irrational-to-rational"  target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Irrational to Rational Approximation</a> - Python module for math simplification.</li>
@@ -39,14 +32,14 @@
     </section>
 
     <section id = "java">
-        <h1>Java <img src="https://github.com/Github-Shashank/my-website/blob/main/images/java_logo.png?raw=true" alt="" class="icon"></h1>
+        <h1>Java <img src="{{ url_for('static', filename=logo_lst['java']) }}" alt="" class="icon"></h1> 
         <ol>
             <li>🔐 <a href="https://github.com/Github-Shashank/caesar-cipher-tool"  target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Caesar Cipher Tool</a> - A simple Java-based encryption/decryption tool.</li>
         </ol>
     </section>
 
     <section id = "html">
-        <h1>HTML <img src="https://github.com/Github-Shashank/my-website/blob/main/images/html_logo.png?raw=true" alt="" class="icon"></h1>
+        <h1>HTML <img src="{{ url_for('static', filename=logo_lst['html']) }}" alt="" class="icon"></h1> 
         <ol>
             <li> 🌏<a href="https://github.com/Github-Shashank/my-website" targe="_blank" rel="noopener noreferrer" style="text-decoration: none;">My Website</a> - About Me <a href="https://github-shashank.github.io/my-website/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span style="font-size:smaller;">WebView</span></a>.</li>
             <li> 💳<a href="https://github.com/Github-Shashank/Design-a-Business-Card" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Design a Business Card</a> - A simple Business Card <a href="https://github-shashank.github.io/Design-a-Business-Card/" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><span style="font-size:smaller;">WebView</span></a>.</li>
@@ -56,7 +49,7 @@
     </section>
 
     <section id="cpp">
-        <h1>C++ <img src="https://github.com/Github-Shashank/my-website/blob/main/images/cpp_logo.png?raw=true" alt="" class="icon"></h1>
+        <h1>C++ <img src="{{ url_for('static', filename=logo_lst['cpp']) }}" alt="" class="icon"></h1> 
         <ol>
             <li> 🤖<a href="https://github.com/Github-Shashank/Obstacle-Avoiding-Robot" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">Obstacle Avoiding Car</a> - Coded for arduino with some sensors to avoid collision.</li>
         </ol>
@@ -69,24 +62,4 @@
             <li> <a href="" targe="_blank" rel="noopener noreferrer" style="text-decoration: none;"></a>  </li>
         </ol>
     </section> -->
-
-    <section id="contact">
-        <center>
-            <h4>Connect With Me 👋</h4>
-            <p>
-                <a href="mailto:shashankpatel.vns@gmail.com"  target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail"></a>
-                <a href="https://github.com/Github-Shashank" target="_blank" rel="noopener noreferrer" ><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github" alt="Github"></a>
-                <a href="https://www.linkedin.com/in/shashank-singh-patel-4b17a935a" target="_blank" rel="noopener noreferrer" ><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
-                <a href="https://www.instagram.com/insta_shashank_sp/" target="_blank" rel="noopener noreferrer" ><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"></a>
-            </p>
-        </center> 
-    </section>
-
-    <footer>
-        <p>© 2025 Shashank | Built with HTML, Java-Script & CSS</p>
-    </footer>
-
-    
-    <script src="../script.js"></script>
-</body>
-</html>
+{% endblock %}
